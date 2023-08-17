@@ -1,0 +1,21 @@
+#include<stdio.h>
+ 
+int main(){
+    char word[100];
+    int n;
+    scanf("%d\n", &n);
+    for(int i=0; i<n; i++){
+        gets(word);
+        int sum = 0;
+        for(int j=0; word[j]!='\0'; j++){
+            sum++;
+        }
+        if(sum>10){
+            printf("%c%d%c\n", word[0], sum-2, word[sum-1]);
+        }
+        else{
+            puts(word);
+        }
+    }
+    return 0;
+}
