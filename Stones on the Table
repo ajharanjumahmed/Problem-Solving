@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int n,i,j,cnt=0;
+    string s;
+    cin>> n;
+    cin>> s;
+    for(i=n; i>0; i--)
+    {
+        if(s[i]==s[i-1]){
+            cnt++;
+        }
+    }
+    cout <<cnt<<endl;
+}
+
+// https://codeforces.com/contest/266/problem/A
