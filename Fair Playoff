@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int t;
+    cin>>t;
+    int arr[4];
+    while(t--)
+    {
+        int maximum = 0;
+        int maximum2 = 0;
+        for(int i=0; i<4; i++)
+        {
+            cin>>arr[i];
+            if(arr[i]>maximum){
+                maximum = arr[i];
+            }
+        }
+ 
+        for(int i=0; i<4; i++)
+        {
+            if((arr[i]>maximum2)&&(arr[i]<maximum)){
+                maximum2 = arr[i];
+            }
+        }
+        if((arr[0]==maximum)&&(arr[1]==maximum2)){
+            cout<<"NO"<<endl;
+        }
+        else if((arr[1]==maximum)&&(arr[0]==maximum2)){
+            cout<<"NO"<<endl;
+        }
+        else if((arr[2]==maximum)&&(arr[3]==maximum2)){
+            cout<<"NO"<<endl;
+        }
+        else if((arr[3]==maximum)&&(arr[2]==maximum2)){
+            cout<<"NO"<<endl;
+        }
+        else
+            cout<<"YES"<<endl;
+    }
+ 
+}
+
+// https://codeforces.com/contest/1535/problem/A
