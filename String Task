@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    char s[101];
+    vector<char> s1;
+    scanf("%s", &s);
+    int len = strlen(s);
+    strlwr(s);
+    for(int i=0; i<len; i++)
+    {
+        if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='y'){
+            continue;
+        }
+        else{
+            char dot = '.';
+            s1.push_back(dot);
+            char a = s[i];
+            s1.push_back(a);
+        }
+    }
+    for(auto u:s1){
+        cout<<u;
+    }
+}
+
+// https://codeforces.com/contest/118/problem/A
