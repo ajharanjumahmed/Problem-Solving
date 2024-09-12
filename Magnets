@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main(){
+    int n;
+    cin >> n;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin >> arr[i];
+    }
+    int cmp = arr[0];
+    int cnt = 1;
+    for(int i=0; i<n; i++){
+        if(arr[i]==cmp){
+            continue;
+        }
+        else if(arr[i]!=cmp){
+            cnt++;
+            cmp = arr[i];
+        }
+    }
+    cout << cnt << endl;
+ 
+}
+
+// https://codeforces.com/contest/344/problem/A
