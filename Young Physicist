@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int n;
+    cin>>n;
+    int sa=0, sb=0, sc=0;
+    while(n--)
+    {
+        int a,b,c;
+        cin>>a>>b>>c;
+        sa += a;
+        sb += b;
+        sc += c;
+    }
+    if((sa==0)&&(sb==0)&&(sc==0)){
+        cout<<"YES"<<endl;
+    }
+    else
+        cout<<"NO"<<endl;
+}
+
+// https://codeforces.com/contest/69/problem/A
