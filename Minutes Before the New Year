@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int h,m;
+        cin>>h>>m;
+        if(h==23){
+            cout<<60-m<<endl;
+        }
+        else if(h<23){
+            int hour = (23-h)*60;
+            cout<<hour+(60-m)<<endl;
+        }
+    }
+}
+
+// https://codeforces.com/contest/1283/problem/A
